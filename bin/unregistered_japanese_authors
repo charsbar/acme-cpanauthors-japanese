@@ -1,0 +1,103 @@
+#!perl
+use strict;
+use warnings;
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+use Acme::CPANAuthors::Utils qw( cpan_authors );
+use Acme::CPANAuthors::Japanese;
+use Lingua::JA::Romaji::Valid;
+
+my $validator  = Lingua::JA::Romaji::Valid->new;
+my %known      = Acme::CPANAuthors::Japanese->authors;
+my %exceptions = _exceptions();
+
+my @authors;
+foreach my $author ( cpan_authors->authors ) {
+  my $email = $author->email;
+  my $name  = lc $author->name or next;
+  my $id    = $author->pauseid;
+
+  next if $known{$id};
+  next if $exceptions{$id};
+  next unless $validator->as_fullname( $name );
+  next unless $email =~ /\.(com|org|net|jp)$/i;
+
+  push @authors, $author;
+}
+
+print "num of candidates: " , (scalar @authors), "\n";
+
+foreach my $author ( sort { $a->pauseid cmp $b->pauseid } @authors ) {
+  my $id   = $author->pauseid;
+  my $name = $author->name;
+  my $mail = $author->email;
+  print qq{    $id => '$name', # ($mail)\n};
+}
+
+# these authors have names which can be readable as Japanese
+
+sub _exceptions {(
+    ANNADURAI => 'Anna Durai',
+    BENH => 'Benjamin Hare',
+    BIJUA => 'Biju A',
+    BOXZOU => 'Bo Zou',
+    GRUBER => 'Anton Berezin',
+    HJANSEN => 'Heiko Jansen',
+    HUGOCHIEN => 'Hugo Chien',
+    HUJINPU => 'Jinpu Hu',
+    IDO => 'Ido Rosen',
+    INSANEART => 'Joe Mason',
+    ITEGEBO => 'Ian Tegebo',
+    JACM => 'Jose Machado',
+    JAE => 'Jae Gangemi',
+    JBURATI => 'Johan Burati',
+    JIMBOX => 'Jimi Mikusi',
+    JMINIERI => 'Joe Minieri',
+    JMOORE => 'Jason Moore',
+    JOSHKUO => 'Joshua Kuo',
+    JRENNIE => 'Jason Rennie',
+    MANNI => 'Manni Heumann',
+    MHM => 'Mike Moran',
+    MISHOO => 'Mihai Bazon',
+    MITTI => 'Aaron Mitti',
+    MLRU => 'Mario Russo',
+    MMACHADO => 'Mike Machado',
+    MVR => 'Ramana Mokkapati',
+    RANN => 'Ran Ningyu',
+    RNAIMA => 'Reza Naima',
+    SANJOGA => 'Sanjoga Sahu',
+    SANKO => 'Sanko Robinson',
+    SDAGUE => 'Sean Dague',
+    SEGAN => 'Sean Egan',
+    SIERRA => 'Mike Sierra',
+    THUNDERA => 'Mauro Ribeiro',
+    YKAR => 'Yuri Karaban',
+    ZIYA => 'Ziya Suzen',
+)}
+
+__END__
+
+=head1 NAME
+
+unregistered_japanese_authors - try to find unregistered Japanese CPAN authors
+
+=head1 SYNOPSIS
+
+ > unregistered_japanese_authors
+
+=head1 DESCRIPTION
+
+You can use this to find Pause IDs whose real name looks like Japanese.
+
+=head1 AUTHOR
+
+Kenichi Ishigaki, E<lt>ishigaki at cpan.orgE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2007 by Kenichi Ishigaki.
+
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
+=cut
