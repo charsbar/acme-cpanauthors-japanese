@@ -37,6 +37,7 @@ foreach my $author ( sort { $a->pauseid cmp $b->pauseid } @authors ) {
 # these authors have names which can be readable as Japanese
 
 sub _exceptions {(
+    ANAK => 'Mario Rossano',
     ANNADURAI => 'Anna Durai',
     BENH => 'Benjamin Hare',
     BIJUA => 'Biju A',
@@ -63,6 +64,7 @@ sub _exceptions {(
     MLRU => 'Mario Russo',
     MMACHADO => 'Mike Machado',
     MVR => 'Ramana Mokkapati',
+    PANYU => 'PAN YU',
     RANN => 'Ran Ningyu',
     RNAIMA => 'Reza Naima',
     SANJOGA => 'Sanjoga Sahu',
