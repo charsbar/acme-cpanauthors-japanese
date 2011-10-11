@@ -42,6 +42,8 @@ sub _exceptions {(
     BENH => 'Benjamin Hare',
     BIJUA => 'Biju A',
     BOXZOU => 'Bo Zou',
+    BSAGO => 'Benjamin Sago',
+    DKOGAN => 'Dima Kogan',
     GRUBER => 'Anton Berezin',
     HJANSEN => 'Heiko Jansen',
     HUGOCHIEN => 'Hugo Chien',
