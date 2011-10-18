@@ -69,7 +69,6 @@ use Acme::CPANAuthors::Register (
     ICHI      => 'Takuya Ichikawa',
     IHARA     => 'Ikuhiro IHARA',
     IKEBE     => 'IKEBE Tomohiro',
-    IKEGAMI   => 'ikegami',
     IKUTA     => 'Masahito Ikuta',
     IIZUKA    => 'Nao Iizuka',
     INA       => 'INABA Hitoshi',

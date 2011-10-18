@@ -50,6 +50,7 @@ sub _exceptions {(
     HUJINPU => 'Jinpu Hu',
     IDO => 'Ido Rosen',
     INSANEART => 'Joe Mason',
+    IKEGAMI   => 'ikegami',  # Eric Brine
     ITEGEBO => 'Ian Tegebo',
     JACM => 'Jose Machado',
     JAE => 'Jae Gangemi',
