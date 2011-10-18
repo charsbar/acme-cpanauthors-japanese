@@ -146,6 +146,7 @@ use Acme::CPANAuthors::Register (
     MIZZY     => 'Gosuke Miyashita',
     MORIYA    => 'Moriya Masaki',
     MURATA    => 'Shingo Murata',
+    MURATAYA  => 'MURATA Yasuhisa',
     MYUJI     => 'Yuji Maeda',
     NABESHIMA => 'Masaaki NABESHIMA',
     NAITO     => 'Naoyuki Ito',

@@ -60,6 +60,7 @@ sub _exceptions {(
     JMOORE => 'Jason Moore',
     JOSHKUO => 'Joshua Kuo',
     JRENNIE => 'Jason Rennie',
+    JSIME => 'Jon Sime',
     MANNI => 'Manni Heumann',
     MHM => 'Mike Moran',
     MISHOO => 'Mihai Bazon',
