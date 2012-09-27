@@ -3,7 +3,7 @@ package Acme::CPANAuthors::Japanese;
 use strict;
 use warnings;
 
-our $VERSION = '0.111012';
+our $VERSION = '0.120927';
 
 use Acme::CPANAuthors::Register (
     AERDAN    => 'Kiyoshi Aman',
