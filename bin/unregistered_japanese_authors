@@ -72,6 +72,7 @@ sub _exceptions {(
     MVR => 'Ramana Mokkapati',
     PANYU => 'PAN YU',
     RANN => 'Ran Ningyu',
+    RFP => 'Rui Patinha',
     RNAIMA => 'Reza Naima',
     SANJOGA => 'Sanjoga Sahu',
     SANKO => 'Sanko Robinson',
