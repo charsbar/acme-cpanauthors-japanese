@@ -446,11 +446,11 @@ This class provides a hash of Japanese CPAN authors' Pause ID/name to Acme::CPAN
 
 =head1 MAINTENANCE
 
-If you are a Japanese CPAN author not listed here, come CodeRepos to add your own id/name. If you are listed but are not Japanese (or just don't want to be listed), sorry to bother you but tell me via email, IRC, or RT. I'll remove.
+If you are a Japanese CPAN author not listed here, send me an email or a pull request to add your own id/name. If you are listed but are not Japanese (or just don't want to be listed), sorry to bother you but tell me via email, IRC, or RT. I'll remove.
 
-=head1 SVN REPOSITORY
+=head1 REPOSITORY
 
-http://svn.coderepos.org/share/lang/perl/Acme-CPANAuthors-Japanese/
+https://github.com/charsbar/acme-cpanauthors-japanese
 
 =head1 AUTHOR
 
