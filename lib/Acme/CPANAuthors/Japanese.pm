@@ -3,7 +3,7 @@ package Acme::CPANAuthors::Japanese;
 use strict;
 use warnings;
 
-our $VERSION = '0.130104';
+our $VERSION = '0.130307';
 
 use Acme::CPANAuthors::Register (
     ACE       => 'yuichi tsunoda',
@@ -15,6 +15,7 @@ use Acme::CPANAuthors::Register (
     AKIRA     => 'Akira Hangai',
     AKIYM     => 'Takumi Akiyama',
     AKOBA     => 'Atsushi Kobayashi',
+    AKXLIX    => 'azuma, kuniyuki',
     AMARISAN  => 'Ryoji Tanida',
     ANAZAWA   => 'Ryo Anazawa',
     AQL       => 'Tetsuya Toyoda',
@@ -43,6 +44,7 @@ use Acme::CPANAuthors::Register (
     DGSCOPE   => 'Masayuki Komori',
     DMAKI     => 'Daisuke Maki',
     DRAWNBOY  => 'Hideaki Tanaka',
+    FNOBI     => 'Fujisawa Shin',
     FUJIMURA  => 'FUJIMURA Yuki',
     FUJIWARA  => 'Fujiwara Shunichiro',
     FUKATA    => 'Tatsuya Fukata',
@@ -52,6 +54,7 @@ use Acme::CPANAuthors::Register (
     GFUJI     => 'Goro Fuji',
     GUNYA     => 'GUNYARA-KUN',
     HAMANO    => 'Tsukasa Hamano',
+    HANDLE    => 'NAGATA Hiroaki',
     HAOYAYOI  => 'Soshi Tamura',
     HATA      => 'Masanori HATA',
     HATAK     => 'Hisashi HATAKEYAMA',
@@ -67,6 +70,7 @@ use Acme::CPANAuthors::Register (
     HIMAZU    => 'Hideyo Imazu',
     HIO       => 'YAMASHINA Hio',
     HIRAFOO   => 'Tomoya Hirano',
+    HIRAMATSU => 'Kazutake Hiramatsu',
     HIRATA    => 'HIRATA Yasuyuki',
     HIRATARA  => 'Masahiro Honma',
     HIRO      => 'hiroshi kitano',
@@ -145,6 +149,7 @@ use Acme::CPANAuthors::Register (
     LIMITUSUS => 'Tomoya KABE',
     LUSHE     => 'Masatoshi Mizuno',
     LYOKATO   => 'Lyo Kato',
+    MACOPY    => 'Makoto Taniwaki',
     MAGICDRIV => 'Hiroshi IKEGAMI',
     MAHIRO    => 'Mahiro Ando',
     MAHITO    => 'Hogelist',
@@ -173,6 +178,7 @@ use Acme::CPANAuthors::Register (
     MOZNION   => 'Taiki Kawakami',
     MURATA    => 'Shingo Murata',
     MURATAYA  => 'MURATA Yasuhisa',
+    MUYOSHI   => 'Mutsutoshi Yoshimoto',
     MYUJI     => 'Yuji Maeda',
     NABESHIMA => 'Masaaki NABESHIMA',
     NAITO     => 'Naoyuki Ito',
