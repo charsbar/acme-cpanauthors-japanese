@@ -1,5 +1,8 @@
 Revision history for Acme-CPANAuthors-Japanese
 
+0.130919 2013/09/19
+  - YAPC::Asia 2013 update
+
 0.130307 2013/03/07
   - turned out to have long ignored authors whose emails are CENSORED;
     added nearly hundred people to the list.
