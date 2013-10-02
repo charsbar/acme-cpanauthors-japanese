@@ -3,7 +3,7 @@ package Acme::CPANAuthors::Japanese;
 use strict;
 use warnings;
 
-our $VERSION = '0.130930';
+our $VERSION = '0.131002';
 
 use Acme::CPANAuthors::Register (
     ABUI      => 'DAISUKE ABUI',
