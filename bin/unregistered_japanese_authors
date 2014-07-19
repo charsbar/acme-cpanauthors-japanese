@@ -48,20 +48,27 @@ if ($opts{update} && $opts{exception}) {
   while(<$in>) {
     if (/^sub _exceptions/) {
       print $out $_;
-      for my $id (sort keys %exceptions) {
-        if (ref $exceptions{$id}) {
-          print $out "    $id => '$exceptions{$id}[0]', # ($exceptions{$id}[1])\n";
-        } else {
-          print $out "    $id => '$exceptions{$id}',\n";
-        }
-      }
       $flag = 1;
       next;
     }
     if ($flag && /^\)\}/) {
+      for my $id (sort keys %exceptions) {
+        if (ref $exceptions{$id}) {
+          print $out "    $id => '$exceptions{$id}[0]', # $exceptions{$id}[1]\n";
+        } else {
+          print $out "    $id => '$exceptions{$id}',\n";
+        }
+      }
       $flag = 0;
     }
-    print $out $_ unless $flag;
+    if ($flag) {
+        my ($id, $name, $comment) = /^\s+(\w+)\s*=>\s*'(.+?)',(?:\s*#\s*(.+))?$/;
+        if ($id && $name && $comment) {
+            $exceptions{$id} = [$name, $comment];
+        }
+        next;
+    }
+    print $out $_;
   }
   close $in;
   close $out;
@@ -105,14 +112,15 @@ if ($opts{update}) {
 # these authors have names which can be readable as Japanese
 
 sub _exceptions {(
+    AANARI => 'Ali Anari',
     AARONJJ => 'Aaron Johnson',
     ADEO => 'Adekunle Olonoh',
     ADITYA => 'Aditya Wasudeo',
     AKISSANE => 'Aidan Kissane',
     ALANC => 'Alan Champion',
     AMBROSEUS => 'Eugene Samonenko',
-    ANARION => 'Anarion',
     ANAK => 'Mario Rossano',
+    ANARION => 'Anarion',
     ANBU => 'Anbalagan Pugaleesan',
     ANDOT => 'MA Bingyao',
     ANEI => 'Ailin Nemui',
@@ -127,11 +135,12 @@ sub _exceptions {(
     BENH => 'Benjamin Hare',
     BEPPU => 'John Beppu',
     BERETTA => 'Joshua Moore',
-    BIOJETONE => 'mecha',
     BIJUA => 'Biju A',
     BINOJOHN => 'Bino John',
+    BIOJETONE => 'mecha',
     BKOLERA => 'Ben Kolera',
     BLX => 'lorenzo bellotti',
+    BOLILA => 'Joao Bolila',
     BOXZOU => 'Bo Zou',
     BSAGO => 'Benjamin Sago',
     BUGONI => 'Piero Bugoni',
@@ -146,6 +155,7 @@ sub _exceptions {(
     DALEAMON => 'Dale Amon',
     DANMOORE => 'Dan Moore',
     DAREOLA => 'Domingo Areola',
+    DBEUSEE => 'Don Beusee',
     DEBAJYOTI => 'Debajyoti Dutta',
     DEEPAN => 'deepan',
     DELANO => 'Delano',
@@ -172,9 +182,11 @@ sub _exceptions {(
     GIULIENK => 'Giulio Motta',
     GROUSSE => 'Guillaume Rousse',
     GRUBER => 'Anton Berezin',
+    GTRONICS => 'Gian Rondanelli',
     GUOJIAN => 'GuojianLee',
     HAGANK => 'Ken Hagan',
     HAQ => 'ben',
+    HARRISON => 'HARRISON PAGE',
     HAVOX => 'Joe Mora',
     HDANAK => 'Hike Danakian',
     HEJKI => 'Heikki Mehtanen',
@@ -189,7 +201,7 @@ sub _exceptions {(
     ICIBIN => 'Bin Shu ',
     IDO => 'Ido Rosen',
     IKALLEN => 'Ian Kallen',
-    IKEGAMI   => 'ikegami',  # Eric Brine
+    IKEGAMI => 'ikegami', # Eric Brine
     ILYALIT => 'Ilya Lityuga',
     IMAGO => 'Polina Shubina',
     INSANEART => 'Joe Mason',
@@ -214,6 +226,7 @@ sub _exceptions {(
     JMONGAN => 'John Mongan',
     JMOORE => 'Jason Moore',
     JNOLAN => 'John Nolan',
+    JOHANNA => 'Johanna Amann',
     JOHNGH => 'John Harrison',
     JOHNH => 'John Heidemann',
     JOHNHARRI => 'John Harrison',
@@ -223,6 +236,7 @@ sub _exceptions {(
     JONALLEN => 'Jon Allen',
     JONI => 'Joni Salonen',
     JOSHKUO => 'Joshua Kuo',
+    JREAGAN => 'Joe Reagan',
     JRENNIE => 'Jason Rennie',
     JSET => 'Eugene Kulesha',
     JSIME => 'Jon Sime',
@@ -232,6 +246,7 @@ sub _exceptions {(
     KAN => 'Kan Liu',
     KANGU => 'kangu',
     KENWU => 'lilo',
+    KOKEKATSU => 'koke katsu', # ???
     KUUSE => 'Johan Kuuse',
     KYU => 'kyu',
     LAYE => 'Lei Sun',
@@ -274,9 +289,11 @@ sub _exceptions {(
     MPLATTU => 'Matti Lattu',
     MVR => 'Ramana Mokkapati',
     NANDU => 'Nandu Shah',
+    NAPOLEONU => 'Chao Nie',
     NETKEN => 'Ken Liu',
     NHARALE => 'Nitin Harale',
     NOAH => 'Noah Robin',
+    OLIVERLUO => 'Yao Luo',
     OPIATE => 'Shane Allen',
     ORION => 'Orion Montoya',
     PANYU => 'PAN YU',
@@ -290,6 +307,7 @@ sub _exceptions {(
     RFP => 'Rui Patinha',
     RIJA => 'Rija Menage',
     RNAIMA => 'Reza Naima',
+    ROBHLE => 'Robera Haile',
     RPIKKARA => 'Raino Pikkarainen',
     RSARAN => 'Rogerio Saran',
     RUBINJ => 'Joshua Rubin',
@@ -300,10 +318,12 @@ sub _exceptions {(
     SASIKALA => 'sasi',
     SATRAC => 'John Monteiro',
     SDAGUE => 'Sean Dague',
+    SEEBERG => 'Yuanhao Li',
     SEGAN => 'Sean Egan',
     SENDU => 'Sendu Bala',
     SHANHE => 'Shan He',
     SHARAN => 'Sharanabasu',
+    SHIKIN => 'Iurii Shikin',
     SIDIBE => 'Samba SIDIBE',
     SIERRA => 'Mike Sierra',
     SIMOTRONE => 'Simone Tampieri',
@@ -314,6 +334,7 @@ sub _exceptions {(
     SUNGO => 'sungo',
     SYAMAL => 'Syamala Tadigadapa',
     SYXANASH => 'Simone',
+    TALINA => 'TALINA',
     TANTALOR => 'John Tantalo',
     TAO => 'TAO',
     THOC => 'Ben',
@@ -328,6 +349,7 @@ sub _exceptions {(
     WARRENHUA => 'Warren',
     YKAR => 'Yuri Karaban',
     YULESHOW => 'Wanshu Shao',
+    ZANDY => 'John Chain',
     ZEMAN => 'Dan Zeman',
     ZIYA => 'Ziya Suzen',
 )}
