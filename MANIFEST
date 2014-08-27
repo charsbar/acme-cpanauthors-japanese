@@ -1,5 +1,6 @@
 bin/unregistered_japanese_authors
 Changes
+cpanfile
 lib/Acme/CPANAuthors/Japanese.pm
 Makefile.PL
 MANIFEST			This list of files
