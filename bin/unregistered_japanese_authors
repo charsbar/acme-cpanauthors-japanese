@@ -327,6 +327,7 @@ sub _exceptions {(
     SIDIBE => 'Samba SIDIBE',
     SIERRA => 'Mike Sierra',
     SIMOTRONE => 'Simone Tampieri',
+    SKYLOADER => 'jaemin choi',
     SMSO => 'Shimin Shuai',
     SNOOPYBBT => 'Emanuele Santoro',
     SODASODA => 'Ilya Soda',
