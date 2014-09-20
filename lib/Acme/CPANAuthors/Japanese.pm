@@ -3,7 +3,7 @@ package Acme::CPANAuthors::Japanese;
 use strict;
 use warnings;
 
-our $VERSION = '0.140828';
+our $VERSION = '0.140920';
 
 use Acme::CPANAuthors::Register (
     ABUI      => 'DAISUKE ABUI',
@@ -210,6 +210,7 @@ use Acme::CPANAuthors::Register (
     KUBOTA    => 'Tomohiro KUBOTA',
     KUMA      => 'KUMAGAI Kentaro',
     KUMAKATSU => 'katsuki ookuma',
+    KUNIWAK   => 'Yuki Kokubun',
     KUNIYOSHI => 'Kuniyoshi Kouji',
     KURAMAKO  => 'makoto',
     KURIHARA  => 'Yoshiki KURIHARA',
@@ -257,6 +258,7 @@ use Acme::CPANAuthors::Register (
     MATSUMOTO => 'syushi matsumoto',
     MATTN     => 'Yasuhiro Matsumoto',
     MERU      => 'meru_akimbo',
+    MIHYAERU  => 'Atsushi Takano',
     MIKAGE    => 'SANO Taku',
     MIKI      => 'Takeshi Miki',
     MIKIHOSHI => 'KAN Fushihara',
@@ -341,6 +343,7 @@ use Acme::CPANAuthors::Register (
     POPPEN    => 'Shinsuke Matsui',
     PUNYTAN   => 'punipuni',
     QAZXSWEDC => 'hiroshi morimoto',
+    QBTCFAHX  => 'Naoki SUDA',
     QUEEN     => 'Yasuhiro Miyazaki',
     RIMFS     => 'Yuichiro Tanaka',
     RINSATO   => 'takashi sato',
