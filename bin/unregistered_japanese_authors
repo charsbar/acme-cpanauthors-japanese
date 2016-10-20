@@ -40,7 +40,7 @@ foreach my $author ( sort { $a->pauseid cmp $b->pauseid } @authors ) {
   $exceptions{$id} = $known{$id} = [$name, $mail];
 }
 
-if ($opts{update} && $opts{exception}) {
+if ($opts{exception}) {
   my $file = __FILE__;
   open my $in, '<', $file or die $!;
   open my $out, '>', "$file.tmp" or die $!;
@@ -145,6 +145,7 @@ sub _exceptions {(
     BKOLERA => 'Ben Kolera',
     BLX => 'lorenzo bellotti',
     BOLILA => 'Joao Bolila',
+    BOMBUP => 'no name',
     BOXZOU => 'Bo Zou',
     BSAGO => 'Benjamin Sago',
     BUGONI => 'Piero Bugoni',
@@ -179,6 +180,7 @@ sub _exceptions {(
     ELEONORA => 'Eleonora',
     EMAZEP => 'Emanuele Zeppieri',
     EMIL => 'Etienne Millon',
+    ETILEM => 'Etienne LEMEE',
     ETLTCHFIG => 'Leon Panokarren',
     EUGENEK => 'Eugene Kuzin',
     FINNPERL => 'IIKONE',
@@ -187,6 +189,7 @@ sub _exceptions {(
     FREEHAHA => 'John Sun',
     FUKAI => 'Fu Kai ',
     GAGGINO => 'Paolo Gaggia',
+    GBAROSIO => 'Guido Barosio',
     GGALLONE => 'Giuseppe Gallone',
     GIPPOLITI => 'Giuliano Ippoliti',
     GIULIENK => 'Giulio Motta',
@@ -195,6 +198,8 @@ sub _exceptions {(
     GRUBER => 'Anton Berezin',
     GTORIKIAN => 'Garen Torikian',
     GTRONICS => 'Gian Rondanelli',
+    GUGO => 'Gugo Kaluga',
+    GUILTYD => 'Ben Moon',
     GUISEA => 'Aaron Guise',
     GUOJIAN => 'GuojianLee',
     HAGANK => 'Ken Hagan',
@@ -204,11 +209,13 @@ sub _exceptions {(
     HAVOX => 'Joe Mora',
     HAYOBAAN => 'Hayo Baan',
     HDANAK => 'Hike Danakian',
+    HEDALIAN => 'Ruben Llorente',
     HEJKI => 'Heikki Mehtanen',
     HELEI => 'He Lei',
     HESSU => 'Heikki Hannikainen',
     HITSU => 'hitsubunnu',
     HJANSEN => 'Heiko Jansen',
+    HMLATAPIE => 'Hugo Latapie',
     HOUZUO => 'Houzuo Guo',
     HUGOCHIEN => 'Hugo Chien',
     HUJINPU => 'Jinpu Hu',
@@ -230,6 +237,7 @@ sub _exceptions {(
     JBJOHNS => 'Jason Johnson',
     JBURATI => 'Johan Burati',
     JGOULAH => 'John Goulah',
+    JHHTOPERL => 'Huihui Jin',
     JHUNI => 'Joon Hee',
     JIMBOX => 'Jimi Mikusi',
     JINZE => 'Jinze Li',
@@ -282,6 +290,8 @@ sub _exceptions {(
     LIUL => 'liu logen',
     LMASARA => 'Luigino Masarati',
     LODIN => 'Johan Lodin',
+    LSEBE => 'Lian Sebe',
+    LUN => 'Lun Li', # CENSORED
     LUPUS => 'Paolo Molaro',
     LUX => 'Luigi Iotti',
     LYMANRB => 'Li Ruibo',
@@ -293,6 +303,7 @@ sub _exceptions {(
     MANNO => 'Mario Manno',
     MARIO => 'Mario Minati',
     MASAHJI => 'masahji',
+    MASONLI => 'Mason Li',
     MELLON => 'Dario Meloni',
     MGAMMON => 'Mike Gammon',
     MHM => 'Mike Moran',
@@ -304,6 +315,7 @@ sub _exceptions {(
     MOON => 'Moon Lee',
     MOUNS => 'N Mouniee',
     MPLATTU => 'Matti Lattu',
+    MRSLX => 'ollie',
     MVR => 'Ramana Mokkapati',
     NANDU => 'Nandu Shah',
     NAPOLEONU => 'Chao Nie',
@@ -311,8 +323,11 @@ sub _exceptions {(
     NHARALE => 'Nitin Harale',
     NOAH => 'Noah Robin',
     OLIVERLUO => 'Yao Luo',
+    OOTEMACHI => 'oote machi', # ???
     OPIATE => 'Shane Allen',
+    ORANGE => 'JuZi',
     ORION => 'Orion Montoya',
+    PALI => 'Pali',
     PANYU => 'PAN YU',
     PAOLO => 'paolo',
     PASSOS => 'Simon Liu',
@@ -352,6 +367,7 @@ sub _exceptions {(
     SMSO => 'Shimin Shuai',
     SNOOPYBBT => 'Emanuele Santoro',
     SODASODA => 'Ilya Soda',
+    SPOT => 'Jussi Kinnula',
     SUJAI => 'SujaiSojan',
     SUNGO => 'sungo',
     SYAMAL => 'Syamala Tadigadapa',
@@ -373,6 +389,7 @@ sub _exceptions {(
     YULESHOW => 'Wanshu Shao',
     ZANDY => 'John Chain',
     ZEMAN => 'Dan Zeman',
+    ZIALI => 'Ali Zia',
     ZITSEN => 'Linhe Huo',
     ZIYA => 'Ziya Suzen',
 )}
