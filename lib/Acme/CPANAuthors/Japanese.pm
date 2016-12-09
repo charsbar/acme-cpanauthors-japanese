@@ -3,7 +3,7 @@ package Acme::CPANAuthors::Japanese;
 use strict;
 use warnings;
 
-our $VERSION = '0.161021';
+our $VERSION = '0.161210';
 
 use Acme::CPANAuthors::Register (
     ABUI      => 'DAISUKE ABUI',
@@ -106,6 +106,7 @@ use Acme::CPANAuthors::Register (
     HATZ      => 'TSUGIHITO SHIBAHATA',
     HAYAJO    => 'Hayato Imai',
     HAYASHI   => 'Hiroo HAYASHI',
+    HCH       => 'Hirokazu Chiba',
     HDAICHI   => 'daichi hiroki',
     HEDWIG    => 'Yusuke Sugiyama',
     HENTEKO   => 'Kenta Imai',
@@ -385,6 +386,7 @@ use Acme::CPANAuthors::Register (
     RINTARO   => 'Rintaro Ishizaki',
     RITOU     => 'Ryo Ito',
     RIYWO     => 'Ryosuke IWANAGA',
+    ROCKBONE  => 'Tooru Tsurukawa',
     ROZARY    => 'Syunsuke Fujishiro',
     RYM       => 'Takayuki Murakami',
     RYMIZUKI  => 'ryo iinuma',
