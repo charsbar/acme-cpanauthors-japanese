@@ -336,6 +336,7 @@ use Acme::CPANAuthors::Register (
     NAGATA    => 'Ichito Nagata',
     NAHCNUJ   => 'Junichi Hayashi',
     NAITO     => 'Naoyuki Ito',
+    NAKASHIN  => 'Shinji Nakamura',
     NAKAYAMA  => 'Yasuhiro Nakayama',
     NANTO     => 'nanto_vi (TOYAMA Nao)',
     NANZOU    => 'Takaaki Mizuno',
